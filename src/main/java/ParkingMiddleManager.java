@@ -1,7 +1,7 @@
 import java.util.Comparator;
 import java.util.List;
 
-public class ParkingMiddleManager {
+public class ParkingMiddleManager extends Manager {
     private List<ParkingLot> parkingLots;
 
     public ParkingMiddleManager(List<ParkingLot> parkingLots) {

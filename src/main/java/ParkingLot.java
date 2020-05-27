@@ -19,10 +19,6 @@ public class ParkingLot {
         return spaces;
     }
 
-    public int getCapacity() {
-        return capacity;
-    }
-
     public double getCapacityRate() {
         return (double)spaces / (double)capacity;
     }
