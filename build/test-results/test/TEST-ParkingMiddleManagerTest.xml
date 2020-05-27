@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ParkingMiddleManagerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-27T08:47:16" hostname="CNxzyang.local" time="0.011">
+<testsuite name="ParkingMiddleManagerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-05-27T08:55:56" hostname="CNxzyang.local" time="0.01">
   <properties/>
-  <testcase name="ShouldParkTheCarInTheFirstParkingLotIfTheFirstParkingLotHasMoreAvailableSpaces" classname="ParkingMiddleManagerTest" time="0.011"/>
+  <testcase name="ShouldParkTheCarInTheFirstParkingLotIfTheFirstParkingLotHasMoreAvailableSpaces" classname="ParkingMiddleManagerTest" time="0.01"/>
+  <testcase name="ShouldParkTheCarInTheSecondParkingLotIfTheSecondParkingLotHasMoreAvailableSpaces" classname="ParkingMiddleManagerTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
