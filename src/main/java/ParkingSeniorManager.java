@@ -1,3 +1,4 @@
+import java.util.Comparator;
 import java.util.List;
 
 public class ParkingSeniorManager {
@@ -8,9 +9,10 @@ public class ParkingSeniorManager {
         this.parkingLots = parkingLots;
     }
 
-    public void park() {
+    public void park() throws Exception {
         if (parkingLots.size() > 0) {
-            
+            ParkingLot lotToPark = parkingLots.stream().max(Comparator.comparingDouble(ParkingLot::getCapacityRate)).get();
+            lotToPark.park();
         }
     }
 }

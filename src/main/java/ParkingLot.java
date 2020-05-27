@@ -19,6 +19,14 @@ public class ParkingLot {
         return spaces;
     }
 
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public double getCapacityRate() {
+        return (double)spaces / (double)capacity;
+    }
+
     public void retrieve() throws Exception{
         if (this.spaces == this.capacity) {
             throw new Exception("No car in the parking lot");
