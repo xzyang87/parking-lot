@@ -7,8 +7,8 @@ import java.util.List;
 public class SeniorParkingManagerTest {
     @Test
     public void ShouldParkTheCarInTheFirstParkingLotIfTheFirstParkingLotHasTheLargestVacancyRate() throws Exception {
-        ParkingLot lot1 = new ParkingLot(5, "Alpha");
-        ParkingLot lot2 = new ParkingLot(2, "Beta");
+        ParkingLot lot1 = new ParkingLot(5, "Alfa");
+        ParkingLot lot2 = new ParkingLot(2, "Bravo");
         List<ParkingLot> parkingLots = Arrays.asList(lot1, lot2);
         // lot1 left: 2, capacityRate: 0.4
         lot1.park();
@@ -27,8 +27,8 @@ public class SeniorParkingManagerTest {
 
     @Test
     public void ShouldParkTheCarInTheSecondParkingLotIfTheSecondParkingLotHasTheLargestVacancyRate() throws Exception {
-        ParkingLot lot1 = new ParkingLot(5, "Alpha");
-        ParkingLot lot2 = new ParkingLot(2, "Beta");
+        ParkingLot lot1 = new ParkingLot(5, "Alfa");
+        ParkingLot lot2 = new ParkingLot(2, "Bravo");
         List<ParkingLot> parkingLots = Arrays.asList(lot1, lot2);
         // lot1 left: 3, capacityRate: 0.6
         lot1.park();

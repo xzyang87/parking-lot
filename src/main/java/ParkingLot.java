@@ -1,3 +1,5 @@
+import static java.lang.Math.round;
+
 public class ParkingLot {
 
     private int spaces;
@@ -17,24 +19,12 @@ public class ParkingLot {
         this.spaces--;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public int getSpaces() {
         return spaces;
     }
 
-    public int getCapacity() {
-        return capacity;
-    }
-
-    public double getVacancyRate() {
-        return (double)spaces / (double)capacity;
-    }
-
-    public double getOccupancyRate() {
-        return 1 - getVacancyRate();
+    private String OccupancyRate() {
+        return String.format("%.2f", (1 - getVacancyRate()) * 100) + "%";
     }
 
     public void retrieve() throws Exception{
@@ -42,5 +32,17 @@ public class ParkingLot {
             throw new Exception("No car in the parking lot");
         }
         this.spaces++;
+    }
+
+
+    public double getVacancyRate() {
+        return (double)spaces / (double)capacity;
+    }
+
+    public String getInfo() {
+        return "name: " + name + ", " +
+                "capacity: " + capacity + ", " +
+                "vacancy: " + spaces + ", " +
+                "occupancy rate: " + OccupancyRate() + "\n";
     }
 }
