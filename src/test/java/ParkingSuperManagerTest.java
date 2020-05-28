@@ -45,4 +45,13 @@ public class ParkingSuperManagerTest {
         Assert.assertEquals(5, ownLot.getSpaces());
         Assert.assertEquals(5, seniorManagerLot.getSpaces());
     }
+
+//    @Test
+//    public void ShouldPrintSubordinateManagersNamesAndParkingLotInfoOwnedBySubordinates() {
+//        ParkingLot subordinateLot1 = new ParkingLot(2);
+//        ParkingLot subordinateLot2 = new ParkingLot(3);
+//        ParkingLot subordinateLot3 = new ParkingLot(3);
+//
+//        ParkingSenior
+//    }
 }

@@ -4,17 +4,16 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ParkingJuniorManagerTest {
+public class JuniorParkingManagerTest {
     @Test
     public void ShouldParkTheCarInTheFirstParkingLotIfAvailable() throws Exception {
-        List<ParkingLot> parkingLotList = new ArrayList<>();
-        parkingLotList.add(new ParkingLot(2));
-        parkingLotList.add(new ParkingLot(2));
-        new JuniorParkingManager.
-        ParkingJuniorManager boy = new JuniorParkingManager(parkingLotList);
-        boy.park();
-        Assert.assertEquals(boy.getParkingLotList().get(0).getSpaces(), 1);
-        Assert.assertEquals(boy.getParkingLotList().get(1).getSpaces(), 2);
+        List<ParkingLot> parkingLots = new ArrayList<>();
+        parkingLots.add(new ParkingLot(2));
+        parkingLots.add(new ParkingLot(2));
+        JuniorParkingManager juniorManager = new JuniorParkingManager(parkingLots);
+        juniorManager.park();
+        Assert.assertEquals(juniorManager.managedParkingLots().get(0).getSpaces(), 1);
+        Assert.assertEquals(juniorManager.managedParkingLots().get(1).getSpaces(), 2);
     }
 
     @Test
@@ -22,11 +21,11 @@ public class ParkingJuniorManagerTest {
         List<ParkingLot> parkingLotList = new ArrayList<>();
         parkingLotList.add(new ParkingLot(2));
         parkingLotList.add(new ParkingLot(2));
-        JuniorParkingManager boy = new JuniorParkingManager(parkingLotList);
-        boy.park();
-        boy.park();
-        boy.park();
-        Assert.assertEquals(boy.getParkingLotList().get(0).getSpaces(), 0);
-        Assert.assertEquals(boy.getParkingLotList().get(1).getSpaces(), 1);
+        JuniorParkingManager juniorManager = new JuniorParkingManager(parkingLotList);
+        juniorManager.park();
+        juniorManager.park();
+        juniorManager.park();
+        Assert.assertEquals(juniorManager.managedParkingLots().get(0).getSpaces(), 0);
+        Assert.assertEquals(juniorManager.managedParkingLots().get(1).getSpaces(), 1);
     }
 }

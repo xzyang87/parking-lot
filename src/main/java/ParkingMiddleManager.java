@@ -4,6 +4,8 @@ import java.util.List;
 public class ParkingMiddleManager extends Manager {
     private List<ParkingLot> parkingLots;
 
+    private ParkingMiddleManager() { }
+
     public ParkingMiddleManager(List<ParkingLot> parkingLots) {
 
         this.parkingLots = parkingLots;
