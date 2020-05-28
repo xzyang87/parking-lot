@@ -8,8 +8,8 @@ public class JuniorParkingManagerTest {
     @Test
     public void ShouldParkTheCarInTheFirstParkingLotIfAvailable() throws Exception {
         List<ParkingLot> parkingLots = new ArrayList<>();
-        parkingLots.add(new ParkingLot(2));
-        parkingLots.add(new ParkingLot(2));
+        parkingLots.add(new ParkingLot(2, "Alpha"));
+        parkingLots.add(new ParkingLot(2, "Beta"));
         JuniorParkingManager juniorManager = new JuniorParkingManager(parkingLots);
         juniorManager.park();
         Assert.assertEquals(juniorManager.managedParkingLots().get(0).getSpaces(), 1);
@@ -19,8 +19,8 @@ public class JuniorParkingManagerTest {
     @Test
     public void ShouldParkTheCarInTheSecondParkingLotIfTheFirstParkingLotIsUnavailable() throws Exception {
         List<ParkingLot> parkingLotList = new ArrayList<>();
-        parkingLotList.add(new ParkingLot(2));
-        parkingLotList.add(new ParkingLot(2));
+        parkingLotList.add(new ParkingLot(2, "Alpha"));
+        parkingLotList.add(new ParkingLot(2, "Beta"));
         JuniorParkingManager juniorManager = new JuniorParkingManager(parkingLotList);
         juniorManager.park();
         juniorManager.park();

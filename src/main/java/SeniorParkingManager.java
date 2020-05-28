@@ -10,7 +10,7 @@ public class SeniorParkingManager extends ParkingManager {
     public void park() throws Exception {
         List<ParkingLot> parkingLots = managedParkingLots();
         if (parkingLots.size() > 0) {
-            ParkingLot lotToPark = parkingLots.stream().max(Comparator.comparingDouble(ParkingLot::getCapacityRate)).get();
+            ParkingLot lotToPark = parkingLots.stream().max(Comparator.comparingDouble(ParkingLot::getVacancyRate)).get();
             lotToPark.park();
         }
     }

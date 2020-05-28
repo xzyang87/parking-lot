@@ -7,8 +7,8 @@ public class SuperParkingManagerTest {
 
     @Test
     public void ShouldPartToOwnLot() throws Exception {
-        ParkingLot ownLot = new ParkingLot(5);
-        ParkingLot seniorManagerLot = new ParkingLot(5);
+        ParkingLot ownLot = new ParkingLot(5, "Alpha");
+        ParkingLot seniorManagerLot = new ParkingLot(5, "Beta");
         SeniorParkingManager seniorManager = new SeniorParkingManager(Arrays.asList(seniorManagerLot));
         SuperParkingManager superManager = new SuperParkingManager(ownLot, Arrays.asList(seniorManager));
 
@@ -20,8 +20,8 @@ public class SuperParkingManagerTest {
 
     @Test
     public void ShouldParkToSubordinateManagerParkingLot() throws Exception {
-        ParkingLot ownLot = new ParkingLot(5);
-        ParkingLot seniorManagerLot = new ParkingLot(5);
+        ParkingLot ownLot = new ParkingLot(5, "Alpha");
+        ParkingLot seniorManagerLot = new ParkingLot(5, "Beta");
         SeniorParkingManager seniorManager = new SeniorParkingManager(Arrays.asList(seniorManagerLot));
         SuperParkingManager superManager = new SuperParkingManager(ownLot, Arrays.asList(seniorManager));
 
@@ -33,9 +33,9 @@ public class SuperParkingManagerTest {
 
     @Test
     public void ShouldNotParkToNonSubordinateParkingLot() throws Exception {
-        ParkingLot ownLot = new ParkingLot(5);
-        ParkingLot subordinateManagerLot = new ParkingLot(5);
-        ParkingLot nonSubordinateManagerLot = new ParkingLot(5);
+        ParkingLot ownLot = new ParkingLot(5, "Alpha");
+        ParkingLot subordinateManagerLot = new ParkingLot(5, "Beta");
+        ParkingLot nonSubordinateManagerLot = new ParkingLot(5, "Chalie");
         SeniorParkingManager seniorManager = new SeniorParkingManager(Arrays.asList(subordinateManagerLot));
         SeniorParkingManager otherManager = new SeniorParkingManager(Arrays.asList(nonSubordinateManagerLot));
 

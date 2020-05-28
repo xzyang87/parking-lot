@@ -5,7 +5,7 @@ public class ParkingLotTest {
 
     @Test
     public void ShouldAddACarToParkingLotWhenAvailable() throws Exception {
-        ParkingLot parkingLot = new ParkingLot(10);
+        ParkingLot parkingLot = new ParkingLot(10, "Alpha");
         parkingLot.park();
         int spaces = parkingLot.getSpaces();
         Assert.assertEquals(spaces, 9);
@@ -13,13 +13,13 @@ public class ParkingLotTest {
 
     @Test(expected = Exception.class)
     public void ShouldNotAddACarToParkingLotWhenNotAvailable() throws Exception {
-        ParkingLot parkingLot = new ParkingLot(0);
+        ParkingLot parkingLot = new ParkingLot(0, "Alpha");
         parkingLot.park();
     }
 
     @Test
     public void ShouldRetrieveACarFromParkingLot() throws Exception {
-        ParkingLot parkingLot = new ParkingLot(10);
+        ParkingLot parkingLot = new ParkingLot(10, "Alpha");
         parkingLot.park();
         parkingLot.park();
         parkingLot.park();
@@ -30,7 +30,7 @@ public class ParkingLotTest {
 
     @Test(expected = Exception.class)
     public void ShouldNotRetrieveACarFromParkingLotWhenNoCarParked() throws Exception {
-        ParkingLot parkingLot = new ParkingLot(10);
+        ParkingLot parkingLot = new ParkingLot(10, "Alpha");
         parkingLot.retrieve();
     }
 }
